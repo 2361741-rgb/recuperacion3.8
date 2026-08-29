@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atlas | National Geographic</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <button class="menu-toggle" id="menuToggle" type="button">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <div class="natgeo-box"></div>
+            <h2>ATLAS</h2>
+
+            <button class="close-menu" id="closeMenu" type="button">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <div class="menu-item active" data-target="inicio">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+            </div>
+
+            <div class="menu-item" data-target="menu">
+                <i class="fas fa-globe-americas"></i>
+                <span>Explorar</span>
+            </div>
+
+            <div class="menu-item" data-target="continentes">
+                <i class="fas fa-earth-americas"></i>
+                <span>Continentes</span>
+            </div>
+
+            <div class="menu-item" data-target="fauna">
+                <i class="fas fa-paw"></i>
+                <span>Fauna</span>
+            </div>
+
+            <div class="menu-item" data-target="maravillas">
+                <i class="fas fa-mountain"></i>
+                <span>Maravillas</span>
+            </div>
+
+            <div class="menu-item" data-target="busqueda">
+                <i class="fas fa-search"></i>
+                <span>Búsqueda</span>
+            </div>
+
+            <div class="menu-item" data-target="acerca">
+                <i class="fas fa-circle-info"></i>
+                <span>Acerca de</span>
+            </div>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span>ATLAS</span>
+            <small>Explora nuestro mundo</small>
+        </div>
+
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main-content">
+
+        <section id="inicio" class="screen active">
+
+            <div class="hero">
+
+                <div class="hero-text">
+
+                    <span class="yellow-line"></span>
+
+                    <p class="category">EXPLORA EL MUNDO</p>
+
+                    <h1>ATLAS</h1>
+
+                    <h2>National Geographic</h2>
+
+                    <p>
+                        Descubre los continentes, la fauna y las maravillas
+                        naturales de nuestro planeta.
+                    </p>
+
+                    <button class="explore-btn" id="explorarBtn" type="button">
+                        EXPLORAR ATLAS
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+                <div class="hero-image">
+                    <span>AGREGA AQUÍ TU IMAGEN PRINCIPAL</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="menu" class="screen">
+
+            <div class="section-header">
+
+                <span class="category">ATLAS</span>
+
+                <h2>Explora el mundo</h2>
+
+                <p>
+                    Conoce diferentes lugares, especies y maravillas
+                    naturales de nuestro planeta.
+                </p>
+
+            </div>
+
+            <div class="menu-grid">
+
+                <div class="menu-card" data-target="continentes">
+                    <div class="card-icon">
+                        <i class="fas fa-earth-americas"></i>
+                    </div>
+                    <h3>Continentes</h3>
+                    <p>Descubre los grandes continentes del planeta.</p>
+                </div>
+
+                <div class="menu-card" data-target="fauna">
+                    <div class="card-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Fauna</h3>
+                    <p>Conoce animales de diferentes regiones.</p>
+                </div>
+
+                <div class="menu-card" data-target="maravillas">
+                    <div class="card-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Maravillas</h3>
+                    <p>Explora lugares naturales impresionantes.</p>
+                </div>
+
+                <div class="menu-card" data-target="busqueda">
+                    <div class="card-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Búsqueda</h3>
+                    <p>Encuentra información dentro del atlas.</p>
+                </div>
+
+                <div class="menu-card" data-target="acerca">
+                    <div class="card-icon">
+                        <i class="fas fa-circle-info"></i>
+                    </div>
+                    <h3>Acerca de</h3>
+                    <p>Información sobre este proyecto.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="continentes" class="screen">
+
+            <div class="section-header">
+
+                <span class="category">GEOGRAFÍA</span>
+
+                <h2>Continentes</h2>
+
+                <p>
+                    Conoce los principales continentes de nuestro planeta.
+                </p>
+
+            </div>
+
+            <div class="continent-list" id="continentList"></div>
+
+            <div id="continentDetail"></div>
+
+        </section>
+
+        <section id="fauna" class="screen">
+
+            <div class="section-header">
+
+                <span class="category">VIDA SILVESTRE</span>
+
+                <h2>Fauna del mundo</h2>
+
+                <p>
+                    Descubre algunas de las especies más representativas
+                    de nuestro planeta.
+                </p>
+
+            </div>
+
+            <div class="fauna-list" id="faunaList"></div>
+
+            <div id="faunaDetail"></div>
+
+        </section>
+
+        <section id="maravillas" class="screen">
+
+            <div class="section-header">
+
+                <span class="category">NATURALEZA</span>
+
+                <h2>Maravillas naturales</h2>
+
+                <p>
+                    Lugares extraordinarios que muestran la belleza
+                    de nuestro planeta.
+                </p>
+
+            </div>
+
+            <div class="carousel">
+
+                <div class="carousel-image" id="carouselImage">
+                    <span>IMAGEN DE LA MARAVILLA</span>
+                </div>
+
+                <div class="carousel-info">
+
+                    <span class="category">DESTINO</span>
+
+                    <h3 id="carouselTitle">
+                        Gran Cañón
+                    </h3>
+
+                    <p id="carouselDesc">
+                        EE.UU.
+                    </p>
+
+                </div>
+
+                <div class="carousel-controls">
+
+                    <button id="carouselPrev" type="button">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+
+                    <button id="carouselNext" type="button">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="busqueda" class="screen">
+
+            <div class="section-header">
+
+                <span class="category">EXPLORAR</span>
+
+                <h2>Búsqueda</h2>
+
+                <p>
+                    Busca información sobre continentes y fauna.
+                </p>
+
+            </div>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Buscar país, continente o animal..."
+                >
+
+                <button id="searchBtn" type="button">
+                    <i class="fas fa-search"></i>
+                    Buscar
+                </button>
+
+            </div>
+
+            <div class="search-results" id="searchResults">
+
+                <div class="result-item">
+                    Escribe algo para comenzar la búsqueda.
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="acerca" class="screen">
+
+            <div class="about">
+
+                <span class="category">SOBRE EL PROYECTO</span>
+
+                <h2>Atlas National Geographic</h2>
+
+                <div class="about-line"></div>
+
+                <p>
+                    Proyecto: Atlas Digital Interactivo
+                </p>
+
+                <p>
+                    <strong>Estudiante:</strong>
+                    Andrea Cornejo 3-1 D.S
+                </p>
+
+                <p class="about-description">
+                    Aplicación educativa para explorar continentes,
+                    fauna y maravillas naturales.
+                </p>
+
+                <span class="version">
+                    V1.0
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
